@@ -14,4 +14,4 @@ COPY . /Store
 EXPOSE 4200
 EXPOSE 49152
 
-CMD ["npm", "start", "--host=0.0.0.0"]
+CMD ["ng", "serve", "--host=0.0.0.0"]

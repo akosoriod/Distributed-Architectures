@@ -7,7 +7,7 @@ export class SaleService {
 
   constructor(private http: Http) { }
 
-  buyProduct(user_id, product_id) {
+  public buyProduct(user_id, product_id) {
     let body = { user_id: user_id, product_id: product_id }
     let headers = new Headers({ 'ContentType': 'application/json' });
     let options = new RequestOptions({ headers: headers });
