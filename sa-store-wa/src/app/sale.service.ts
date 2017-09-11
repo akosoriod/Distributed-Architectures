@@ -16,13 +16,7 @@ export class SaleService {
       })
     }
 
-    public searchSales(user_id) {
-      return this.http.get('http://192.168.99.101:4000/purchases/'+ user_id).map((response:Response) => { console.log(response.json());
-      response.json();
-        })
-      }
-
-      public searchSales2() {
+      public searchSales() {
         return this.http.get('http://192.168.99.101:3002/sales').map((response:Response) => { console.log(response.json());
         return response.json();
           })

@@ -4,10 +4,12 @@ import { SaleService } from './sale.service';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SaleComponent } from './sale/sale.component';
+import { ConsultComponent } from './consult/consult.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SaleComponent
+    SaleComponent,
+    ConsultComponent
   ],
   imports: [
     BrowserModule,
