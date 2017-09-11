@@ -56,4 +56,23 @@ class BuyController < ApplicationController
     results = HTTParty.get("http://192.168.99.101:3001/users/" + id.to_s)
     return results
   end
+  # GET /purchases/1
+
+  def purchases
+    results = HTTParty.get("http://192.168.99.101:3002/sales/")
+    results2 =[]
+    results.each do |i|
+      if i["user_id"] == params[:id].to_i
+        results2.push(i)
+      end
+    end
+    response = {
+      :body => results2.to_json,
+      :headers => {
+        'Content-Type' => 'application/json'
+      }
+  }
+    puts response
+    return response
+  end
 end
